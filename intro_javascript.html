@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<script>
+			// Todos los datos en js son FLOAT ---> Se implementa el formato IEEE 754
+			//Lenguaje funcional: Funciones que reciben funciones y closures
+			var multi = function(a, b){
+				return a * b;
+			};
+			
+			function operacion(miFuncion, a, b) {
+				return miFuncion(a,b);
+			}
+			/*
+			var calculo = operacion(multi, 3, 2);
+// 			
+			var nombre = prompt("Nombre: ");
+			var domicilio = prompt("Domicilio: ");
+			var tel = prompt("Teléfono:");
+			
+			
+			document.write("<div>Nombre: "+nombre+"</div><div>Domicilio: "+domicilio+"</div><div>Teléfono: "+tel+"</div>");
+			*/
+			var persona = {
+				nombre: "Erik",
+				edad: 45,
+				saludar: function(){
+					document.write('HIHI'+ this.nombre);
+				}
+			};
+			document.write(persona.nombre);
+			persona.saludar();
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

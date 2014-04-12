@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<!-- el navegador utiliza por defecto iso-8859-1 -->
+		<title>Blog</title>
+		<link rel="stylesheet" href="css/normalize.css" />  <!-- uniforma estilos por defecto de todos los navegadores -->
+		<link rel="stylesheet" href="css/principal.css" />
+		
+		<style>
+			/*
+			 *
+			 control + shift + f
+			 * Herramienta de dieño del tema
+			 *
+			 http://colorschemedesigner.com/
+			 */
+		</style>
+	</head>
+	<body>
+		<!--todo lo que sea un encabezado -->
+		<header>
+			<h1>
+				{% block titulo %}{% endblock %}
+			</h1>
+			<nav>
+				<ul>
+					<li>
+						Inicio
+					</li>
+					<li>
+						Blog
+					</li>
+					<li>
+						Contacto
+					</li>
+				</ul>
+			</nav>
+		</header>
+		{% block contenido %}
+		
+		{% endblock %}
+		<section id="presentacion">
+			<!-- Semántico -- Define un contenido para un tema en particular  -- visualmente tiene el mismo efecto que un div -- es utilizado por motores de búsqueda -->
+			<h1>Desarrollo ágil como un gato</h1><!-- Es posible tener sólo 1 h1 por section -->
+		</section>
+		<section id="servicios">
+			<div class="servicio">
+				<img src="./imagenes/movil.png" />
+				<h2>Móviles</h2>
+			</div>
+			<div class="servicio">
+				<img src="./imagenes/seo.png" />
+				<h2>SEO</h2>
+			</div>
+
+			<div class="servicio">
+				<img src="./imagenes/compu.png" />
+				<h2>Diseño</h2>
+			</div>
+		</section>
+		<section id="testimonios">
+			<div class="testimonio">
+				<img src="./imagenes/testimonio.jpg" />
+				<p>
+					Excelente producto, mi vida es mejor desde entonces. <strong>caniuse.com</strong>
+				</p>
+			</div>
+			<div class="testimonio">
+				<video controls="" loop poster="./imagenes/testimonio.jpg" class="flexible">
+					<!-- ffmpeg comado para convertir formatos en linux -->
+					<!-- autoplay -->
+					<source src="./videos/testimonio.webm" type="video/webm" />
+					<source src="./videos/testimonio.ogv" type="video/ogv />
+					<source src="./videos/testimonio.mp4" type="video/mp4" />
+					Tu navegadro no soporta video :(
+					</video>
+					</div>
+					</section>
+		<footer>
+			<div id="sociales">
+					<h2>Síguenos:</h2>
+					<img src="imagenes/vidrio/facebook.png" />
+					<img src="imagenes/vidrio/twitter.png" />
+					<img src="imagenes/vidrio/google.png" />
+			</div>
+			<div id="suscribir">
+				<h2>Suscribir:</h2>
+				<form action="/suscribir" method="post">
+					<label for="suscribir-email">Email:</label>
+					<input id="suscribir-email" type="text" name="email" />
+					<input type="submit" value="Enviar" />
+				</form>
+				
+			</div>
+		</footer>
+	</body>
+</html>

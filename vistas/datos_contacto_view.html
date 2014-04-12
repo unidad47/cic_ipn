@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+
+{% block titulo %}
+	Resultado contacto
+{% endblock %}
+
+{% block contenido %}
+	<h2>Gracias!</h2>
+	
+	<p>Nombre: {{datos_contacto.nombre}}</p>
+	<p>Email: {{datos_contacto.email}}</p>
+	<p>Website: {{datos_contacto.website}}</p>
+	<p>Edad: {{datos_contacto.edad}}</p>
+	<p>Comentario: {{datos_contacto.comentario}}</p>
+	
+{% endblock %}

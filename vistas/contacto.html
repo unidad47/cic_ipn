@@ -1,0 +1,55 @@
+{%extends "layout.html"%}
+
+{% block titulo %}
+	Contacto
+{% endblock %}
+
+{% block contenido %}
+<style>
+	.form-contacto {
+		margin: 5px 0;
+	}
+	.form-contacto label{
+		display: inline-block;
+		width: 100px;
+	}
+	
+	#contact_container {
+		width: 400px;
+		margin: 0 auto;
+	}
+</style>
+	<h2>Contáctanos</h2>
+	<div id="contact_container">
+		<fieldset>
+    		<legend>¿En qué podemos ayudarte?</legend>
+    		<form action="contactar" method="post">
+	    		<div class="form-contacto">
+					<label for="con_nombre">Nombre: </label>
+					<input type="text" name="nombre" value="" id="con_nombre" required placeholder="Tu nombre aquí" />
+				</div>
+				<div class="form-contacto">
+					<label for="con_nombre">Email: </label>
+					<input type="email" name="email" value="" id="con_email" />
+				</div>
+				<div class="form-contacto">
+					<label for="con_nombre">Website (url): </label>
+					<input type="text" name="website" value="" id="con_website" />
+				</div>
+				<div class="form-contacto">
+					<label for="con_nombre">Edad: </label>
+					<input type="number" name="edad" value="" id="con_edad" min="18" max="190" /> <!-- type="range" -->
+				</div>
+				<div class="form-contacto">
+					<label for="con_nombre">Comentario: </label>
+					<textarea name="comentario" id="con_comentario" required >
+					</textarea>
+				</div>
+				<div class="form-contacto">
+					<input type="submit" value="Enviar" />
+				</div>
+			</form>
+		</fieldset>
+	</div>
+{% endblock %}
+
